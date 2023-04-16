@@ -14,6 +14,8 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // Heading of Application
+
             Text(
               'Tiktok Clone',
               style: TextStyle(
@@ -22,6 +24,9 @@ class LoginScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+
+            // subHeading of Application
+
             const Text(
               'Login',
               style: TextStyle(
@@ -32,6 +37,9 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
+
+            // Email textfield input
+
             Container(
               width: MediaQuery.of(context).size.width,
               margin: const EdgeInsets.symmetric(
@@ -47,6 +55,9 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
+
+            // Password textfield input
+
             Container(
               width: MediaQuery.of(context).size.width,
               margin: const EdgeInsets.symmetric(
@@ -62,6 +73,7 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 35,
             ),
+            // Login Button
             Container(
               width: MediaQuery.of(context).size.width - 40,
               height: 50,
@@ -87,6 +99,9 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 15),
+
+            // Don't have an account? Register
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

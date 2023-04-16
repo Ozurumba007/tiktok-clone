@@ -18,6 +18,8 @@ class SignupScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // Heading of application
+
             Text(
               'Tiktok Clone',
               style: TextStyle(
@@ -26,6 +28,9 @@ class SignupScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+
+            // subHeading of the application
+
             const Text(
               'Register',
               style: TextStyle(
@@ -36,6 +41,9 @@ class SignupScreen extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
+
+            // Username textfield input
+
             Container(
               width: MediaQuery.of(context).size.width,
               margin: const EdgeInsets.symmetric(
@@ -51,6 +59,9 @@ class SignupScreen extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
+
+            // Email textfield input
+
             Container(
               width: MediaQuery.of(context).size.width,
               margin: const EdgeInsets.symmetric(
@@ -66,6 +77,9 @@ class SignupScreen extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
+
+            // Password textfield input
+
             Container(
               width: MediaQuery.of(context).size.width,
               margin: const EdgeInsets.symmetric(
@@ -81,6 +95,9 @@ class SignupScreen extends StatelessWidget {
             const SizedBox(
               height: 35,
             ),
+
+            // Register button
+
             Container(
               width: MediaQuery.of(context).size.width - 40,
               height: 50,
@@ -106,6 +123,9 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 15),
+
+            // Already have an account? Login
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
