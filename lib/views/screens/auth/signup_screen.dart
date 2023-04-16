@@ -42,6 +42,32 @@ class SignupScreen extends StatelessWidget {
               height: 25,
             ),
 
+            // Profile picture
+
+            Stack(
+              children: [
+                const CircleAvatar(
+                  radius: 64,
+                  backgroundImage: NetworkImage(
+                      'https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png'),
+                  backgroundColor: Colors.black,
+                ),
+                Positioned(
+                  bottom: -10,
+                  left: 80,
+                  child: IconButton(
+                    onPressed: () {
+                      print('Pick image');
+                    },
+                    icon: Icon(Icons.add_a_photo),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 25,
+            ),
+
             // Username textfield input
 
             Container(
