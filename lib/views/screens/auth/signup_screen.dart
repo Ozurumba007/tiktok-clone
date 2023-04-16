@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:tiktok_clone/constant.dart';
-import 'package:tiktok_clone/views/widgets/text_input_field.dart';
 
-class LoginScreen extends StatelessWidget {
+import '../../../constant.dart';
+import '../../widgets/text_input_field.dart';
+
+class SignupScreen extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
+  SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
