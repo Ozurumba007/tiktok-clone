@@ -6,6 +6,7 @@ import '../../widgets/text_input_field.dart';
 class SignupScreen extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
 
   SignupScreen({super.key});
 
@@ -26,10 +27,25 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
             const Text(
-              'Login',
+              'Register',
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w700,
+              ),
+            ),
+            const SizedBox(
+              height: 25,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              margin: const EdgeInsets.symmetric(
+                horizontal: 20,
+              ),
+              child: TextInputField(
+                controller: _usernameController,
+                labelText: 'Username',
+                isObsecure: false,
+                icon: Icons.person,
               ),
             ),
             const SizedBox(
@@ -76,11 +92,11 @@ class SignupScreen extends StatelessWidget {
               ),
               child: InkWell(
                 onTap: () {
-                  print('Login User');
+                  print('Register User');
                 },
                 child: const Center(
                   child: Text(
-                    'Login',
+                    'Register',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
@@ -94,13 +110,13 @@ class SignupScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Don\'t have an account? ',
+                  'Already have an account? ',
                   style: TextStyle(fontSize: 20),
                 ),
                 InkWell(
                   onTap: () => print('Navigating user'),
                   child: Text(
-                    'Register',
+                    'Login',
                     style: TextStyle(
                       fontSize: 20,
                       color: buttonColor,
