@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/constant.dart';
+import 'package:tiktok_clone/views/widgets/text_input_field.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,12 @@ class LoginScreen extends StatelessWidget {
               height: 25,
             ),
             Container(
-              child:   ,
+              child: TextInputField(
+                controller: _emailController,
+                labelText: 'Email',
+                isObsecure: false,
+                icon: Icons.email_outlined,
+              ),
             ),
           ],
         ),
