@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../constant.dart';
 import '../widgets/custom_icon.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -31,16 +32,14 @@ class _HomeScreenState extends State<HomeScreen> {
               icon: Icon(Icons.home, size: 30), label: 'Home'),
           BottomNavigationBarItem(
               icon: Icon(Icons.search, size: 30), label: 'Search'),
-          BottomNavigationBarItem(icon: CustomIcon(), label: 'Home'),
+          BottomNavigationBarItem(icon: CustomIcon(), label: ''),
           BottomNavigationBarItem(
               icon: Icon(Icons.message, size: 30), label: 'Messages'),
           BottomNavigationBarItem(
               icon: Icon(Icons.person, size: 30), label: 'Profile'),
         ],
       ),
-      body: Center(
-        child: Text('Home Screen'),
-      ),
+      body: pages[pageIdx],
     );
   }
 }
