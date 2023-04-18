@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:tiktok_clone/constant.dart';
 import 'package:tiktok_clone/controllers/auth_controller.dart';
 
+import 'views/screens/auth/login_screen.dart';
 import 'views/screens/auth/signup_screen.dart';
 
 void main() async {
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
       ),
-      home: SignupScreen(),
+      home: LoginScreen(),
     );
   }
 }

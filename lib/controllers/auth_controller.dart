@@ -79,4 +79,21 @@ class AuthController extends GetxController {
       );
     }
   }
+
+  Future<void> loginUser(String email, String password) async {
+    try {
+      if (email.isNotEmpty && password.isNotEmpty) {
+        await firebaseAuth.signInWithEmailAndPassword(
+            email: email, password: password);
+        Get.snackbar('Successfully Logged', '');
+      } else {
+        Get.snackbar('Error Logging', ' Please enter all the fields');
+      }
+    } catch (e) {
+      Get.snackbar(
+        'Error Logging to the Account',
+        e.toString(),
+      );
+    }
+  }
 }
