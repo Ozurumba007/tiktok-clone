@@ -22,7 +22,7 @@ class SignupScreen extends StatelessWidget {
               children: [
                 // Heading of application
 
-                 Text(
+                Text(
                   'Tiktok Clone',
                   style: TextStyle(
                     fontSize: 35,
@@ -58,9 +58,7 @@ class SignupScreen extends StatelessWidget {
                       bottom: -10,
                       left: 80,
                       child: IconButton(
-                        onPressed: () {
-                          print('Pick image');
-                        },
+                        onPressed: () => authController.pickImage(),
                         icon: Icon(Icons.add_a_photo),
                       ),
                     ),
@@ -136,9 +134,12 @@ class SignupScreen extends StatelessWidget {
                     ),
                   ),
                   child: InkWell(
-                    onTap: () {
-                      print('Register User');
-                    },
+                    onTap: () => authController.registerUser(
+                      _usernameController.text,
+                      _emailController.text,
+                      _passwordController.text,
+                      authController.profilePhoto,
+                    ),
                     child: const Center(
                       child: Text(
                         'Register',
