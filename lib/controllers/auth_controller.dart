@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get/get.dart';
+import 'package:tiktok_clone/models/user.dart' as model;
 
 import '../constant.dart';
 
@@ -38,6 +39,12 @@ class AuthController extends GetxController {
           password: password,
         );
         String downloadUrl = await _uploadToStorage(image);
+        model.User user = model.User(
+          name: username,
+          email: email,
+          uid: cred.user!.uid,
+          profilePhoto: downloadUrl,
+        );
       }
     } catch (e) {
       Get.snackbar(
